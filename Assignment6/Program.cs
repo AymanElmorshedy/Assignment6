@@ -316,6 +316,42 @@ namespace Assignment6
             //        Console.WriteLine("is primary color");
             //else Console.WriteLine("is not primary color");
             #endregion
+            #region Q5
+            double x1, y1, x2, y2;
+            bool x1flag, y1flag, x2flag, y2flag;
+            do
+            {
+                Console.WriteLine("Enter the X of the first point:");
+                x1flag = double.TryParse(Console.ReadLine(), out x1);
+            } while (!x1flag);
+
+            do
+            {
+                Console.WriteLine("Enter the Y of the first point:");
+                y1flag = double.TryParse(Console.ReadLine(), out y1);
+
+            } while (!y1flag);
+
+            do
+            {
+                Console.WriteLine("Enter the X of the second point:");
+                x2flag = double.TryParse(Console.ReadLine(), out x2);
+
+            } while (!x2flag);
+
+            do
+            {
+                Console.WriteLine("Enter the Y of the second point:");
+                y2flag = double.TryParse(Console.ReadLine(), out y2);
+
+            } while (!y2flag);
+
+            Point POne = new Point(x1, y1);
+            Point PTwo = new Point(x2, y2);
+
+            var dis = Point.CalculateDistance(POne.x, POne.y, PTwo.x, PTwo.y);
+            Console.WriteLine($"The distance between the two points is {dis}");
+            #endregion
             #endregion
 
         }
