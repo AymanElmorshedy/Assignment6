@@ -300,7 +300,7 @@ namespace Assignment6
             // // Or |
             // //use to check for permission
             // Employee.Permissions= Employee.Permissions | Permissions.Write;
-             //Console.WriteLine(Employee.Permissions);
+            //Console.WriteLine(Employee.Permissions);
             #endregion
             #region MyRegion
 
