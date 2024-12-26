@@ -111,6 +111,12 @@ namespace Assignment6
             Autumn,
             Winter
         }
+        public enum Colors
+        {
+            red,
+            green,
+            blue,
+        };
 
         static void Main(string[] args)
         {
@@ -302,8 +308,13 @@ namespace Assignment6
             // Employee.Permissions= Employee.Permissions | Permissions.Write;
             //Console.WriteLine(Employee.Permissions);
             #endregion
-            #region MyRegion
+            #region Q4
 
+            //Console.WriteLine("Enter a valid Color to Check if it primary color or not.");
+            //string Color = Console.ReadLine().ToLower();
+            //if(Enum.IsDefined(typeof(Colors), Color))
+            //        Console.WriteLine("is primary color");
+            //else Console.WriteLine("is not primary color");
             #endregion
             #endregion
 
