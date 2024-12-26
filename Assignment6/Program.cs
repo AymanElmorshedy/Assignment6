@@ -111,6 +111,12 @@ namespace Assignment6
             Autumn,
             Winter
         }
+        public enum Colors
+        {
+            red,
+            green,
+            blue,
+        };
 
         static void Main(string[] args)
         {
@@ -245,7 +251,7 @@ namespace Assignment6
             }
             #endregion
             #region Q2
-            
+
             Console.WriteLine("Enter the season (Spring, Summer, Autumn, Winter):");
             string input = Console.ReadLine();
             if (Enum.TryParse(input, true, out Season season))
@@ -300,10 +306,51 @@ namespace Assignment6
             // // Or |
             // //use to check for permission
             // Employee.Permissions= Employee.Permissions | Permissions.Write;
-            // Console.WriteLine(Employee.Permissions); 
+            //Console.WriteLine(Employee.Permissions);
             #endregion
-            #region MyRegion
+            #region Q4
 
+            //Console.WriteLine("Enter a valid Color to Check if it primary color or not.");
+            //string Color = Console.ReadLine().ToLower();
+            //if(Enum.IsDefined(typeof(Colors), Color))
+            //        Console.WriteLine("is primary color");
+            //else Console.WriteLine("is not primary color");
+            #endregion
+            #region Q5
+            double x1, y1, x2, y2;
+            bool x1flag, y1flag, x2flag, y2flag;
+            do
+            {
+                Console.WriteLine("Enter the X of the first point:");
+                x1flag = double.TryParse(Console.ReadLine(), out x1);
+            } while (!x1flag);
+
+            do
+            {
+                Console.WriteLine("Enter the Y of the first point:");
+                y1flag = double.TryParse(Console.ReadLine(), out y1);
+
+            } while (!y1flag);
+
+            do
+            {
+                Console.WriteLine("Enter the X of the second point:");
+                x2flag = double.TryParse(Console.ReadLine(), out x2);
+
+            } while (!x2flag);
+
+            do
+            {
+                Console.WriteLine("Enter the Y of the second point:");
+                y2flag = double.TryParse(Console.ReadLine(), out y2);
+
+            } while (!y2flag);
+
+            Point POne = new Point(x1, y1);
+            Point PTwo = new Point(x2, y2);
+
+            var dis = Point.CalculateDistance(POne.x, POne.y, PTwo.x, PTwo.y);
+            Console.WriteLine($"The distance between the two points is {dis}");
             #endregion
             #endregion
 

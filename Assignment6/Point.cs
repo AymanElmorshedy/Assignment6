@@ -20,31 +20,30 @@ namespace Assignment6
         //what wer can write in struct
         //1.Attributes [Fields]=>Member value
         #region attributes
-        public int x;
-        public int y;
+        public double x;
+        public double y;
         #endregion
         //2.functions[constructor Geter Seter method]
         //Constructor:Special function
         //name => same name of class or struct
         //No return data type
         #region Constructor
-        public Point()//prametr less constructor
-        {
-            //used for initialize elments of struct
-            x = 0;
-            y = 0;
-        }
-        public Point(int _x, int _y)
+        public Point(double _x, double _y)
         {
             x = _x;
             y = _y;
         }
+
         #endregion
         //3.propeerities[full automatic indexer ]
         //4.Events
-        public override string ToString()
+
+
+        public static double CalculateDistance(double x1, double y1, double x2, double y2)
         {
-            return $"({x} , {y})";
+            var distance = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            return distance;
         }
-    }
-}
+    }    
+}     
+
