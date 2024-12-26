@@ -245,7 +245,7 @@ namespace Assignment6
             }
             #endregion
             #region Q2
-            
+
             Console.WriteLine("Enter the season (Spring, Summer, Autumn, Winter):");
             string input = Console.ReadLine();
             if (Enum.TryParse(input, true, out Season season))
